@@ -19,8 +19,7 @@ on:
           - Debug
 
 permissions:
-  packages: write # For uploading packages
-  contents: write # For writing changelogs, tags, branches
+  contents: read # For writing changelogs, tags, branches
 
 jobs:
   Detect-Version:
@@ -72,6 +71,10 @@ jobs:
     container: node:current-alpine3.18
     needs: [Detect-Version, Build]
     if: ${{ needs.Detect-Version.outputs.BUILD_VERSION != '' }}
+    permissions:
+      content: write # To Publish a Release / Tag
+      pull-requests: write # To comment on PRs for Release Version
+      issues: write # To comment on issues for Release Version.
     steps:
       - name: Download Dependencies
         run: apk add --update findutils git
@@ -99,6 +102,8 @@ jobs:
     container: mcr.microsoft.com/dotnet/sdk:latest
     needs: [Detect-Version, Build]
     if: ${{ needs.Detect-Version.outputs.BUILD_VERSION != '' }}
+    permissions:
+      packages: write
     steps:
       - uses: actions/download-artifact@v4
         with:
