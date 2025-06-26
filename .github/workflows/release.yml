@@ -90,6 +90,8 @@ jobs:
           name: build
           path: outputs/
       - name: Run Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx --yes -p @semantic-release/changelog -p @semantic-release/git -p @semantic-release/github -p conventional-changelog-conventionalcommits -p semantic-release semantic-release
 
   Publish:
