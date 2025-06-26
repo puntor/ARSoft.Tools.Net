@@ -16,7 +16,7 @@ on:
           - Release
           - Debug
 
-name: Publish DNSFilter.ARSoft.Tools.Net (${{ github.event_name == 'workflow_dispatch' && 'Custom Build' || 'Trunk Build' }})
+name: Publish DNSFilter.ARSoft.Tools.Net ${{ github.event_name == 'workflow_dispatch' && 'Custom Build' || 'Trunk Build' }}
 
 permissions:
   contents: read # For writing changelogs, tags, branches
