@@ -72,7 +72,7 @@ jobs:
     needs: [Detect-Version, Build]
     if: ${{ needs.Detect-Version.outputs.BUILD_VERSION != '' }}
     permissions:
-      content: write # To Publish a Release / Tag
+      contents: write # To Publish a Release / Tag
       pull-requests: write # To comment on PRs for Release Version
       issues: write # To comment on issues for Release Version.
     steps:
