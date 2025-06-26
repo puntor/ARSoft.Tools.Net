@@ -27,6 +27,10 @@ jobs:
     container: node:current-alpine3.18
     outputs:
       BUILD_VERSION: ${{ steps.semantic-release-dry-run.outputs.BUILD_VERSION }}
+    permissions:
+      contents: write # To Publish a Release / Tag
+      pull-requests: write # To comment on PRs for Release Version
+      issues: write # To comment on issues for Release Version.
     steps:
       - name: Download Dependencies
         run: apk add --update findutils git
