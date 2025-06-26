@@ -13,8 +13,6 @@
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Copyright>Copyright 2010..2024 Alexander Reinert</Copyright>
-		<VersionPrefix>3.6.1</VersionPrefix>
-		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
 		<!-- Enables Symbol Support -->
 		<IncludeSymbols>true</IncludeSymbols>
 		<!-- Enables a separate NuGet Package for Symbols, preventing it from leaking into production. -->
