@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/puntor/ARSoft.Tools.Net/compare/v1.0.1...v1.0.2) (2025-06-26)
+
+### Bug Fixes
+
+* stuff ([dd3386e](https://github.com/puntor/ARSoft.Tools.Net/commit/dd3386edc1e3aa9c74224c9f7aaf4722e72a3995))
+* Stuff ([287674c](https://github.com/puntor/ARSoft.Tools.Net/commit/287674c0063f13f9b419b0e8afeb82bba4893f22))
+
 ## [1.0.1](https://github.com/puntor/ARSoft.Tools.Net/compare/v1.0.0...v1.0.1) (2025-06-26)
 
 ### Bug Fixes
